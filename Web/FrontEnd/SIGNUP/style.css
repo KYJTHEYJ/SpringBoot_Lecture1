@@ -1,0 +1,91 @@
+html {
+    box-sizing: border-box;
+    /* padding과 border의 크기를 포함한 영역으로 사이즈를 지정 */
+    /* 기본값은 content-box 인데, 이건 컨텐츠의 크기만 지정 */
+}
+
+body {
+    display: flex;
+    /* flex는 뷰포트의 요소의 크기가 불명확 할 때, 동적으로 변할 때 효율적으로 요소를 배치하기 위한 display */
+    /* 다만 뷰포트의 높이를 지정해줘야 작동함 (그래서 min-height 지정) */
+    align-items: center;
+    /* y축 중앙 기준으로 설정 */
+    justify-content: center;
+    /* x축의 중앙 기준으로 설정 */
+    min-height: 100vh;
+    /* vh는 뷰포트로, 브라우저 창의 보이는 영역 높이를 말함 */
+    background-image: url(forest.jpg);
+    background-size: cover;
+}
+
+#wrapper {
+    width: 420px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 2);
+    /* 이게 x,y,z축이 아니라.. 그냥 진하게 나타내기 위해 오름차수로 지정 */
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.inputGroup {
+    padding: 8px 12px;
+}
+
+.inputGroup label {
+    display: block;
+    padding: 12px 0px;
+}
+
+.inputGroup input {
+    display: block;
+    width: 90%;
+    padding: 12px;
+    border: 2px solid #e2e2e2;
+}
+
+/* 포커스를 두었을 때 */
+.inputGroup input:focus {
+    outline: none;
+    border-color: #888;
+}
+
+/* valid, invalid는 html 요소가 아니고 미리 지정해둔 것 */
+/* 후에 JS를 이용하여 변경 */
+.valid input {
+    border-color: green;
+}
+
+.invalid input {
+    border-color: orangered;
+}
+
+.inputGroup .helperText {
+    visibility: hidden;
+    display: block;
+    padding-top: 8px;
+}
+
+.valid .helperText {
+    visibility: hidden;
+    display: block;
+}
+
+.invalid .helperText {
+    visibility: visible;
+    color: orange;
+}
+
+#wrapper button {
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    /* display가 block일 때 margin이 0 auto 면 가운데 정렬 */
+    font-size: 18px;
+    background-color: green;
+    border: 2px solid green;
+    color: white;
+    cursor: pointer;
+}
