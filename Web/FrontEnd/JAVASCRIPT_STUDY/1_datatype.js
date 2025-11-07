@@ -1,3 +1,4 @@
+Javascript
 /*
 - let, const, var
     - let → 변수
@@ -10,6 +11,11 @@
 - 자료형
     - 원시 타입
         - number, string, boolean, undefined, null
+		- BigInt, Symbol
+			- BigInt는 Number로 표현할 수 없는 큰 정수들 (123n, 999...99n)
+				- Number와 연산되지 않는다
+			- Symbol은 고유 식별자로 object의 key 충돌 방지용
+				- Symbol('key')
             - 이 중 undefined는 데이터 공간만 만들고 미지정 시
             - 의도적으로 값이 없음을 표현할 때 null
     - 참조타입
@@ -48,4 +54,12 @@
             let setToArray = Array.from(set);
             console.log(setToArray[1]); // -> 2
             ```
+		- Function
+			- 일급 객체, 쉽게 말해 값으로 취급되는 함수형
+			
+			```jsx
+			function example() {}
+			```
+
+		- 자료형을 확인할 때는 typeof 연산자를 쓰자
 */

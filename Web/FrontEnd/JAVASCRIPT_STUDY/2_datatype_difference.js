@@ -16,6 +16,7 @@ let age2 = {black: 41}; // -> 실제 값은 heap, 주소는 stack
 
 let obj1 = {name : "Alice"}; // 참조타입 생성 (스택에는 데이터 주소, 힙에는 값)
 let obj2 = obj1; // 이런 경우엔 obj2 변수는 obj1에 담긴 데이터 주소를 저장함
+
 // 결론적으로 obj1, obj2는 같은 데이터 주소를 가지게 됨
 obj2.name = "Bob"; // 이렇게 되면 같은 데이터 주소를 가지므로 obj1의 name이 변경됨
 console.log(obj1.name);
