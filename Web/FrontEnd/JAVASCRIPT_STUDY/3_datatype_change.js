@@ -32,7 +32,7 @@ let number1 = 12345n;
 console.log(`${number1}`);
 
 // Number 형 변환을 원하면 Number() 함수를 사용하거나
-// 간결한 변환은 +, 일부 변환은 parseIn() 같은 형태로 사용하는 것으로 알고 있다
+// 간결한 변환은 +, 일부 변환은 parseInt() 같은 형태로 사용하는 것으로 알고 있다
 let thisisNum = "10.1010";
 console.log(+"abcd"); // -> NaN
 console.log(+thisisNum);
@@ -62,6 +62,7 @@ console.log(object3);
 
 // 참조형을 이제 원시형으로 다루는 것은 다음과 같다
 // toString(), valueOf() 를 호출한다 (각각 문자, 되도록 숫자를 반환하는 것이 권장되는 숫자형 변환)
+// 각각 Symbol 추가로 힌트가 추가 되어 각각의 형태의 형변환 될 때 각기 값 제공 가능
 const objects = {
     valueOf() {return 31; }, toString() {return "custom";}
 };
