@@ -7,5 +7,7 @@
 			"path": "JAVASCRIPT_STUDY"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "JAVASCRIPT_STUDY"
+	}
 }
