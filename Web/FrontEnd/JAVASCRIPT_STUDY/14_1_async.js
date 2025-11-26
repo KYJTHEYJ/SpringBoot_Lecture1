@@ -16,7 +16,7 @@ console.log("end");
 
 // JS에서 비동기 문법 ***
 // 콜백 -> setTimeout(실행함수, 시간)
-// 프로미스 -> promise, 비동기 처리 방식으로 데이터가 언제 프론트에서 백으로 전송이 될지, 반대로 전송을 할지 짐작키 힘듬
+// 프로미스 -> Promise, 비동기 처리 방식으로 데이터가 언제 프론트에서 백으로 전송이 될지, 반대로 전송을 할지 짐작키 힘듬
 //           그래서 나온 개념으로, 무조건 데이터는 전송하는 것을 약속, 도착을 했는지, 안했는지를 구분하는 조건을 지님
 //           도착 성공 (resolve()), 도착 실패 (reject())로 실패 메세지를 남김
 // async, await -> 프로미스의 진화 형태로 async, await 키워드로 데이터가 도착이 성공 했을 때 resolve 역할을 수행
@@ -61,7 +61,29 @@ function orderService() {
 //.catch(error => console.log(error))
 //.finally(() => console.log("배달 주문 종료"));
 
-// async
+// 기본 템플릿
+function 비동기함수이름(매개변수) {
+  return new Promise((resolve, reject) => {
+    // 여기에 비동기 작업 작성
+    
+    if (성공조건) {
+      resolve(성공데이터);
+    } else {
+      reject(에러메시지);
+    }
+  });
+}
+
+// 사용
+비동기함수이름(값)
+  .then(결과 => {
+    // 성공 시 처리
+  })
+  .catch(에러 => {
+    // 실패 시 처리
+  });
+
+// async ****
 // async 를 사용시 Promise 보다 훨씬 짧은 코드로 작성이 가능함
 async function orderService2() {
     return Promise.resolve("배달 주문 조리 완료!");
@@ -88,9 +110,13 @@ async function orderService3() {
 // await -> 비동기를 동기로
 // async 를 사용하면 빠른 속도로 동시다발적 코드가 비순차적으로 실행
 // await 을 사용하면 특정 await 이 적용된 함수는 비순차적에서 순차적으로 코드가 실행되게끔 설정됨
+
+// async는 항상 Promise 형을 변환하고 있으니 주의! ****
+// await도 Promise 형이 항상 뒤에 붙어줘야 하니 주의! ****
+
 async function fetchData2() {
     console.log("데이터 요청 중");
-    let response = await fetch("https://206a0cfe-b224-4df0-96ed-6968248d94e1.mock.pstmn.io/test/1");
+    let response = await fetch("https://jsonplaceholder.typicode.com/users");
     let data = await response.json();
     // 프론트와 백엔드 데이터 교환 사이에서 사용하는 fetch
     // fetch 자체가 비동기 함수 -> 데이터를 비동기적, 비순차적으로 갖고옴
@@ -101,3 +127,46 @@ async function fetchData2() {
 }
 
 fetchData2();
+
+// 템플릿 1: 기본형
+async function 함수이름() {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('에러:', error);
+  }
+}
+
+// 템플릿 2: 여러 요청
+async function 여러데이터가져오기() {
+  try {
+    const [data1, data2, data3] = await Promise.all([
+      fetch(url1).then(r => r.json()),
+      fetch(url2).then(r => r.json()),
+      fetch(url3).then(r => r.json())
+    ]);
+    
+    return { data1, data2, data3 };
+  } catch (error) {
+    console.error('에러:', error);
+  }
+}
+
+// 템플릿 3: 로딩 상태 포함
+async function 로딩포함함수() {
+  let isLoading = true;
+  
+  try {
+    console.log('로딩 중...');
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('에러:', error);
+  } finally {
+    isLoading = false;
+    console.log('로딩 완료');
+  }
+}
