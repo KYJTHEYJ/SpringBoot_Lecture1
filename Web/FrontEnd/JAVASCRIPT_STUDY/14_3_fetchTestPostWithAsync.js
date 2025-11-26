@@ -7,8 +7,8 @@ async function fetchTestPost() {
                 'Content-type': 'application/json'
             },
             body: JSON.stringify({
-                title: 'testtestman',
-                body: 'testtestmanbody',
+                title: 'testTitle',
+                body: 'testBody',
                 userId: 1
             })
         });

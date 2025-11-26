@@ -16,8 +16,8 @@ async function axiosGetTest() {
 async function axiosPostTest() {
     try {
         const response = await axios.post("https://jsonplaceholder.typicode.com/posts", {
-            title: 'testtestman',
-            body: 'testtestmanbody',
+            title: 'testTitle',
+            body: 'testBody',
             userId: 1
         });
         console.log(response.data);
