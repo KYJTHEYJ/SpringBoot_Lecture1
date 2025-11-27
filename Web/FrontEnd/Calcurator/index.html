@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>계산기</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color: white; margin-left: 0.25em;">
+            계산기
+        </h1>
+        <br>
+        <div class="calculator">
+            <input type="text" name="screen" id="screen" readonly>
+            <table>
+                <tr>
+                    <!-- 초기화 버튼 -->
+                    <!-- colspan="3" -> td 태그 한개가 td 태그 3개의 실질적으로 크기을 지님 -->
+                    <td colspan="3"><button id="resetBtn"
+                            style="width:100%; background-color: red; font-weight: bold; color: black">C</button></td>
+                    <td><button>/</button></td>
+                <tr>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>*</button></td>
+                </tr>
+                <tr>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>-</button></td>
+                </tr>
+                <tr>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td><button>+</button></td>
+                </tr>
+                <tr>
+                    <td><button></button></td>
+                    <td><button style="font-weight:bold;">0</button></td>
+                    <td><button></button></td>
+                    <td><button id="resultBtn"
+                            style="background-color: aquamarine; font-weight: bold; color:white">=</button></td>
+                </tr>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

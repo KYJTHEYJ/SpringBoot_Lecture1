@@ -41,7 +41,7 @@ h2 {
 
 .inputGroup input {
     display: block;
-    width: 90%;
+    width: 100%;
     padding: 12px;
     border: 2px solid #e2e2e2;
 }
@@ -55,11 +55,11 @@ h2 {
 /* valid, invalid는 html 요소가 아니고 미리 지정해둔 것 */
 /* 후에 JS를 이용하여 변경 */
 .valid input {
-    border-color: green;
+    border: 5px solid green;
 }
 
 .invalid input {
-    border-color: orangered;
+    border: 5px solid orangered;
 }
 
 .inputGroup .helperText {
@@ -75,15 +75,15 @@ h2 {
 
 .invalid .helperText {
     visibility: visible;
-    color: orange;
+    color: red;
 }
 
 #wrapper button {
     display: block;
-    width: 85%;
+    width: 95%;
     margin: 0 auto;
     /* display가 block일 때 margin이 0 auto 면 가운데 정렬 */
-    font-size: 18px;
+    font-size: 30px;
     background-color: green;
     border: 2px solid green;
     color: white;

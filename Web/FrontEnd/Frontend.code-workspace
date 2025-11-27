@@ -5,9 +5,15 @@
 		},
 		{
 			"path": "JAVASCRIPT_STUDY"
+		},
+		{
+			"path": "Calcurator"
+		},
+		{
+			"path": "PrintStatements"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "SIGNUP"
+		"liveServer.settings.multiRootWorkspaceName": "PrintStatements"
 	}
 }
