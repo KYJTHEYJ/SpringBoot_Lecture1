@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    text-align: center;
+    background-color: white;
+    background-image: url("./forest.jpg");
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    background-color: black;
+}
+
+/* rem -> 부모의 크기에 비례한 단위 ex) 부모 요소가 만약 100px면 4rem은 400px와 동일 */
+.quoteContainer {
+    background-color: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    max-width: 30rem;
+}
+
+#quote {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    margin-bottom: 25px;
+}
+
+#quoteButtons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#loader {
+    font-size: 1rem;
+    font-weight: bold;
+    max-width: 30rem;
+    color: black;
+    margin: 1rem auto;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 8px;
+    background-color: white;
+
+}
+
+#quotePick {
+    background-color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+#quotePick h3 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+#quotePickList {
+    list-style: none;
+    padding: 0;
+}
+
+#quotePickList li {
+    background-color: white;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#nextQuote:hover {
+    background-color: gray;
+}
+
+#selectQuote:hover {
+    background-color: red;
+}

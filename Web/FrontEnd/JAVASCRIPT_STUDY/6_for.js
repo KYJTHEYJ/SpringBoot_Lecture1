@@ -29,3 +29,6 @@ for(let member2 in jediMindTricksWithPosition) {
         `${member2} : ${jediMindTricksWithPosition[member2]}`
     ); 
 }
+
+// for of -> 값을 반복하며 순회
+// for in -> 인덱스의 반복
