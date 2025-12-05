@@ -1,16 +1,24 @@
 {
 	"folders": [
 		{
+			"name": "SIGNUP",
 			"path": "SIGNUP"
 		},
 		{
+			"name": "JAVASCRIPT_STUDY",
 			"path": "JAVASCRIPT_STUDY"
 		},
 		{
+			"name": "PrintStatements",
+			"path": "PrintStatements"
+		},
+		{
+			"name": "Calcurator",
 			"path": "Calcurator"
 		},
 		{
-			"path": "PrintStatements"
+			"name": "React_STUDY",
+			"path": "React_STUDY"
 		}
 	],
 	"settings": {
