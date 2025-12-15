@@ -10,4 +10,4 @@ function GreetingCard(props) {
     )
 }
 
-export default GreetingCard;
+export default GreetingCard
