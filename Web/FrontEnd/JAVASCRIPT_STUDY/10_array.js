@@ -31,5 +31,3 @@ let emptyArray = [];
 let numbers = [1,2,3,4,5];
 let doublenumbers = numbers.map(number => number * 2); // 스트림의 map 처럼 인자들 제어 가능
 let evennumbers = numbers.filter(number => number % 2 == 0); // 스트림의 filter 처럼 중간 연산
-
-console.log("wtf");
